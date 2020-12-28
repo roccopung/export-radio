@@ -1,0 +1,18 @@
+title: Archive
+
+sections:
+  drafts:
+    headline: Drafts
+    type: pages
+    layout: list
+    template: project
+    info: "{{ page.category }}"
+    status: drafts
+  published:
+    headline: Published
+    type: pages
+    layout: cards
+    template: project
+    info: "{{ page.category }}"
+    status: published
+    limit: 20

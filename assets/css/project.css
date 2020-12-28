@@ -1,0 +1,245 @@
+/*FONTS*/
+@font-face {
+	font-family: 'garamond';
+	src: url('../fonts/applegaramond-light.ttf') format('ttf');
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Neue';
+    src: url('../fonts/Neue.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Neue.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Neue.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Neue.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+	overscroll-behavior: none;
+	font-family: 'Neue';
+	background-color: white;
+	font-size: 1.5em;
+	top:0;
+	left: 0;
+ 	margin: 0;
+}
+
+
+/*PROJECT PAGE TYPE*/
+.heading{
+  position: fixed;
+  z-index: 1000;
+}
+
+h2{
+  margin-top: 3vw;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  display: block;
+  align-items: center;
+  text-align: center;
+  font-family: 'Neue';
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+	color: inherit;
+}
+
+.button {
+	display: block;
+	background-color: white;
+	margin-top: 30px;
+	position: fixed;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 2px solid black;
+}
+
+.button:hover {
+	background-color: #000;
+	color: white;
+}
+
+.button a {
+	font-size: 1.2em;
+}
+
+
+	.page{
+	  margin: 0;
+	  padding: 1.5vw 3vw 4rem;
+	}
+
+	.layout{
+	  display: grid;
+	  grid-gap: 3rem;
+	  margin-bottom: 6rem;
+	  grid-template-columns: 1fr 2fr;
+	  margin-top: 5vw;
+	}
+
+	h3{
+	  font-family: 'Neue';
+	  font-size: 1.25em;
+	  font-weight: normal;
+	  margin-bottom: 0;
+	}
+
+	h4{
+	  font-family: 'Neue';
+	  font-size: 0.75em;
+	  font-weight: normal;
+	  margin-top: 0.5vw;
+	}
+
+	aside dl {
+		margin-top: 3rem;
+		font-size: 0.65em;
+	}
+
+	.project-info {
+		display: block;
+		width: auto;
+	}
+
+	dt {
+		margin-top: 1rem;
+		font-weight: bold;
+		line-height: 1.5rem;
+	}
+
+	dd {
+		margin: 0;
+	}
+
+	.textartiste p, .textartiste figure, .textartiste ul {
+	  font-family: 'Neue';
+	  font-size: 0.75em;
+	  font-weight: normal;
+	  display: block;
+		padding: 0;
+	}
+	.textartiste{
+	  display: block;
+	  margin-top:3vw;
+	  width: 100%;
+	}
+
+	.textartiste figure {
+	  margin: 0;
+	  float: left;
+	  width: 100%;
+	}
+
+	.textartiste > *:first-child {
+	  margin-top: 0;
+	}
+	.textartiste a {
+	  position: relative;
+	  font-weight: 500;
+	  z-index: 1;
+	  display: inline-block;
+	}
+	.textartiste figure {
+	  padding-top: 1.5rem;
+	  padding-bottom: 1.5rem;
+	}
+	.textartiste img {
+	  width: 100%;
+	}
+
+	/*TOP*/
+	#myBtn {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Fixed/sticky position */
+	  bottom: 3vw; /* Place the button at the bottom of the page */
+	  left: 3vw; /* Place the button 30px from the right */
+	  z-index: 99; /* Make sure it does not overlap */
+	  border: none; /* Remove borders */
+	  outline: none; /* Remove outline */
+	  color: black; /* Text color */
+	  cursor: pointer; /* Add a mouse pointer on hover */
+	  padding: 15px; /* Some padding */
+	  font-size: 0.5em; /* Increase font size */
+	  background-color: white;
+	}
+
+	/*PREVIOUS*/
+	.previousnext {
+	  display: block;
+	  position: relative;
+	  top: 5vw;
+	  left: 0vw;
+	  width: 100%;
+	}
+
+	#previous, #next{
+	  border: none; /* Remove borders */
+	  outline: none; /* Remove outline */
+	  color: black; /* Text color */
+	  cursor: pointer; /* Add a mouse pointer on hover */
+	  font-size: 0.5em; /* Increase font size */
+	  background-color: white;
+	}
+
+	#previous a, #next a{
+	  text-decoration: none;
+	  color: black;
+	}
+	#previous{
+	  width: 5em;
+	  left:0;
+	  margin-left: 33vw;
+	  height: 5%;
+	}
+	#next{
+	  float: right;
+	  width: 5em;
+	  height: 5%;
+	}
+
+@media screen and (max-width: 699px ) {
+  /* single project page */
+
+
+
+	.layout{
+	  display: grid;
+	  grid-gap: 3rem;
+	  margin-bottom: 6rem;
+	  grid-template-columns: 1fr;
+	  margin-top: 5vw;
+	}
+
+	.project-info {
+		display: inline-block;
+    width: auto;
+    margin-right: 3rem;
+	}
+
+
+	#previous{
+	  width: 5em;
+	  left:0;
+	  margin-left: 0;
+	  height: 5%;
+	}
+	#next{
+	  float: right;
+	  width: 5em;
+	  height: 5%;
+	}
+}
