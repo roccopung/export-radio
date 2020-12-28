@@ -10,7 +10,7 @@
 
 						<div class="logo"><img src="<?= url('assets/icons/exp-logo.svg') ?>"></div>
 
-						<?php snippet('broadcasts') ?>
+						<?php snippet('broadcasts')	?>
 
 					</div>
 

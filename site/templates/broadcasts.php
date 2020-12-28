@@ -2,7 +2,8 @@
 
 		<div id="container-mobile-podcasts">
 
-				<?php snippet('broadcasts') ?>
+				<?php snippet('broadcasts')	?>
+
 
   	</div>
 
