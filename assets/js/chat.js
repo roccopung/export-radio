@@ -1,5 +1,5 @@
 function injectChat(container) {
-  container.innerHTML = `<div id="tlkio" data-channel="export-live" data-theme="theme--night" style="width:100%;height:400px;"></div>`;
+  container.innerHTML = `<div id="tlkio" data-channel="export-live" data-theme="theme--night" style="width:100%;height:100%;"></div>`;
   script = document.createElement("script");
   script.type = "text/javascript";
   script.async = true;
