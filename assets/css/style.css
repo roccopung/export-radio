@@ -374,6 +374,10 @@ h1{
 .chat-widget {
   flex-basis: 50%;
   flex-grow: 1;
+  min-height: 400px;
+}
+.chat-widget iframe, #tlkio {
+  min-height: 400px;
 }
 
 .social{
