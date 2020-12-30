@@ -1,45 +1,60 @@
-(function(){
-  var mousedownFirst;
-  var mousedownSecond;
+function toggleIframes(status) {
+  const iframes = document.querySelectorAll("iframe");
+  iframes.forEach((iframe) => {
+    if (status === false) {
+      iframe.style.pointerEvents = "none";
+    } else {
+      iframe.style.pointerEvents = "all";
+    }
+  });
+}
+function initResize() {
+  let firstHandleActive = false;
+  let secondHandleActive = false;
+  let offset = 0;
 
-  var $first = document.getElementsByClassName('first')[0];
-  var $second = document.getElementsByClassName('second')[0];
-  var $cols = [
-    document.getElementById('col1'),
-    document.getElementById('col2'),
-    document.getElementById('col3')
+  const first = document.querySelector(".resizer.first");
+  const second = document.querySelector(".resizer.second");
+  const columns = [
+    document.getElementById("col1"),
+    document.getElementById("col2"),
+    document.getElementById("col3"),
   ];
 
-  $first.addEventListener('mousedown', e => {
-    mousedownFirst = true;
+  window.addEventListener("mouseup", (e) => {
+    firstHandleActive = false;
+    secondHandleActive = false;
+    toggleIframes(true);
   });
-  $second.addEventListener('mousedown', e => {
-    mousedownSecond = true;
+  document.addEventListener("mousemove", (e) => {
+    e.preventDefault();
+    if (firstHandleActive) {
+      first.style.left = `${e.clientX - offset}px`;
+      columns[0].style.width = `${e.clientX - offset}px`;
+      columns[1].style.left = `${e.clientX - offset}px`;
+    }
+    if (secondHandleActive) {
+      second.style.left = `${e.clientX - offset}px`;
+      columns[1].style.right = `${
+        window.innerWidth - (e.clientX - offset) - 40
+      }px`;
+      columns[2].style.left = `${e.clientX - offset + 20}px`;
+    }
   });
+  first.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    firstHandleActive = true;
+    let handleX = first.getBoundingClientRect().x;
+    offset = e.clientX - handleX;
+    toggleIframes(false);
+  });
+  second.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    secondHandleActive = true;
+    let handleX = second.getBoundingClientRect().x;
+    offset = e.clientX - handleX;
+    toggleIframes(false);
+  });
+}
 
-  document.onmouseup = e => {
-    mousedownFirst = false;
-    mousedownSecond = false;
-  };
-
-  document.onmousemove = e => {
-    if (mousedownFirst){
-      setStyle($first, 'left', e.pageX);
-      setStyle($cols[0], 'width', e.pageX);
-      setStyle($cols[1], 'left', e.pageX );
-    }
-    
-    if (mousedownSecond){
-      setStyle($second, 'left', e.pageX-30);
-      setStyle($cols[1], 'right', window.innerWidth - e.pageX);
-      setStyle($cols[2], 'left', e.pageX);
-    }
-  };
-
-  function setStyle(elem, property, value){
-    elem.style[property] = value + 'px';
-  }
-
-})
-
-  ();
+initResize();
