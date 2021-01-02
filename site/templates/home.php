@@ -34,10 +34,8 @@
 
 
 			<!-- SECOND COLUMN DESKTOP -->
-			<div>
-			  <div id="col2" class="col">
-					<?php snippet('archive') ?>
-				</div>
+			<div id="col2" class="col">
+				<?php snippet('archive') ?>
 			</div>
 
 			<div class="resizer second"></div>

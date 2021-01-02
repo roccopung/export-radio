@@ -29,16 +29,10 @@ function initResize() {
   document.addEventListener("mousemove", (e) => {
     e.preventDefault();
     if (firstHandleActive) {
-      first.style.left = `${e.clientX - offset}px`;
-      columns[0].style.width = `${e.clientX - offset}px`;
-      columns[1].style.left = `${e.clientX - offset}px`;
+      columns[0].style.flexBasis = `${e.clientX - offset}px`;
     }
     if (secondHandleActive) {
-      second.style.left = `${e.clientX - offset}px`;
-      columns[1].style.right = `${
-        window.innerWidth - (e.clientX - offset) - 40
-      }px`;
-      columns[2].style.left = `${e.clientX - offset + 20}px`;
+      columns[2].style.flexBasis = `${window.innerWidth - (e.clientX - offset)}px`;
     }
   });
   first.addEventListener("mousedown", (e) => {

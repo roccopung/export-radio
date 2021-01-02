@@ -89,31 +89,26 @@ a {
   top:0;
   left: 0;
   margin: 0;
+  display: flex;
 }
 
 .col {
   height: 100%;
-  position: absolute;
   z-index: 8000;
 	overflow: scroll;
 }
 
-.first {
+.resizer {
   width: 20px;
   height: 100%;
-  position: absolute;
-  left: 20%;
+  background-color: #707070;
+}
+.first {
   background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
-  z-index: 8001;
 }
 
 .second {
-  width: 20px;
-  height: 100%;
-  position: absolute;
-  right: 20%;
   background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
-  z-index: 8001;
 }
 
 .resizer:hover {
@@ -121,24 +116,20 @@ a {
 }
 
 #col1 {
-  left:0;
-  right: calc(80%  - 4px);
   color: black;
-  position: fixed;
+  flex-basis: 20%;
   background-color: white;
 }
 
 #col2 {
-  left: calc(20% + 4px);
-  right: calc(20% - 4px);
+  flex-basis: 0%;
+  flex-grow: 1;
 	background-color: #707070;
 }
 
 #col3 {
-  left: calc(80% - 3px);
-  right: 0;
+  flex-basis: 20%;
   color: black;
-  position: fixed;
   background-color: white;
 
 }
@@ -369,7 +360,6 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 17vw;
 }
 .chat-widget {
   flex-basis: 50%;
@@ -449,10 +439,6 @@ h1{
 	.first {
 	  width: 20px;
 	  height: 100%;
-	  position: absolute;
-	  left: 30%;
-	  background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
-	  z-index: 8001;
 	}
 
 	.second {
@@ -461,16 +447,8 @@ h1{
 
 
 	#col1 {
-	  left: 0;
-	  right: calc(70%  - 4px);
-	  position: fixed;
-	  background-color: white;
-	}
-
-	#col2 {
-	  left: calc(30% + 4px);
-	  right: 0;
-		background-color: background-color: #707070;;
+    background-color: white;
+    flex-basis: 30%;
 	}
 
 	#col3 {
