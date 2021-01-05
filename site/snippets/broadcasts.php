@@ -1,42 +1,14 @@
-<div class="player">
-        <!-- Define the section for displaying details -->
-        <div class="details">
-          <div class="now-playing">PLAYING x OF y</div>
-          <div class="track-art"></div> <!-- Podcast's img -->
-          <div class="track-name">Track Name</div> <!-- Podcast's name -->
-          <div class="track-artist">Track Artist</div>  <!-- Artists who participated in the podcast -->
-        </div>
-
-        <!-- Define the section for displaying track buttons -->
-        <div class="buttons">
-          <div class="prev-track" onclick="prevTrack()">
-            <i class="fa fa-step-backward fa-2x"></i>
-          </div>
-          <div class="playpause-track" onclick="playpauseTrack()">
-            <i class="fa fa-play-circle fa-5x"></i>
-          </div>
-         <div class="next-track" onclick="nextTrack()">
-            <i class="fa fa-step-forward fa-2x"></i>
-          </div>
-        </div>
-
-        <!-- Define the section for displaying the seek slider-->
-        <div class="slider_container">
-          <div class="current-time">00:00</div>
-          <input type="range" min="1" max="100"
-            value="0" class="seek_slider" onchange="seekTo()">
-          <div class="total-duration">00:00</div>
-        </div>
-
-        <!-- Define the section for displaying the volume slider-->
-        <div class="slider_container">
-          <i class="fa fa-volume-down"></i>
-          <input type="range" min="1" max="100"
-            value="99" class="volume_slider" onchange="setVolume()">
-          <i class="fa fa-volume-up"></i>
-        </div>
-
-        <div class="older-episodes">
-          <button class="button"><a href="https://www.mixcloud.com/ExPort_RADIO/" target="_blank">See all broadcasts</a></button>
-        </div>
+<div class="playlist">
+  <div class="playlist--counter"></div>
+  <div class="playlist--artwork">
+    <img width="640" height="640" src="" alt="">
+  </div>
+  <div class="playlist--player"></div>
+  <div class="playlist--controls">
+    <button class="button playlist--prev">Previous</button>
+    <button class="button playlist--next">Next</button>
+  </div>
+  <div class="playlist--all">
+    <a class="button" href="https://www.mixcloud.com/ExPort_RADIO/" target="_blank">See all broadcasts</a>
+  </div>
 </div>
