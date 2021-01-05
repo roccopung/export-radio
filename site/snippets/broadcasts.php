@@ -5,8 +5,12 @@
   </div>
   <div class="playlist--player"></div>
   <div class="playlist--controls">
-    <button class="button playlist--prev">Previous</button>
-    <button class="button playlist--next">Next</button>
+    <button class="button playlist--prev">
+      <i class="fa fa-step-backward fa-2x"></i>
+    </button>
+    <button class="button playlist--next">
+      <i class="fa fa-step-forward fa-2x"></i>
+    </button>
   </div>
   <div class="playlist--all">
     <a class="button" href="https://www.mixcloud.com/ExPort_RADIO/" target="_blank">See all broadcasts</a>

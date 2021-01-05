@@ -190,14 +190,11 @@ a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   padding: 0.5rem;
   padding-bottom: 2.5vw;
   border-bottom: 4px solid black;
 }
+
 
 .playlist--player {
   display: flex;
@@ -243,6 +240,11 @@ a {
   text-align: center;
 }
 
+.playlist--all {
+	text-align: center;
+}
+
+
 /*ABOUT*/
 h1 {
   font-family: "Neue";
@@ -285,11 +287,11 @@ h1 {
 .chat-widget {
   flex-basis: 50%;
   flex-grow: 1;
-  min-height: 400px;
+  min-height: 250px;
 }
 .chat-widget iframe,
 #tlkio {
-  min-height: 400px;
+  min-height: 250px;
 }
 
 .social {
@@ -376,6 +378,16 @@ h1 {
     display: block;
     border-top: 4px solid #000;
   }
+
+	.chat-widget {
+	  min-height: 400px;
+	}
+
+	.chat-widget iframe,
+	#tlkio {
+	  min-height: 400px;
+	}
+
 }
 
 /* RESPONSIVE - SMALL SIZE SCREEN */

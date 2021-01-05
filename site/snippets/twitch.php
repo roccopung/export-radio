@@ -3,6 +3,6 @@
 
   <iframe frameborder="0"
     src="https://player.twitch.tv/?channel=exportradio&parent=www.roccopunghellini.com"
-    height="350"
+    height="250"
     width="100%">
   </iframe>
