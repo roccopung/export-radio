@@ -32,7 +32,7 @@ function initResize() {
       columns[0].style.flexBasis = `${e.clientX - offset}px`;
     }
     if (secondHandleActive) {
-      columns[2].style.flexBasis = `${window.innerWidth - (e.clientX - offset)}px`;
+      columns[2].style.flexBasis = `${window.innerWidth - (e.clientX + offset)}px`;
     }
   });
   first.addEventListener("mousedown", (e) => {
