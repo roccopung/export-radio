@@ -1,0 +1,47 @@
+.tags {
+  padding: 20px;
+  padding-top: 6rem;
+  font-size: 4rem;
+  list-style: none;
+}
+.tag {
+  display: inline-block;
+  color: inherit;
+  text-transform: lowercase;
+}
+.tag a {
+  display: flex;
+  align-items: center;
+  margin-right: 0.1em;
+}
+
+.tag img {
+  height: 0.8em;
+  margin-right: 0.1em;
+  display: inline-block;
+}
+.tag:hover,
+.tag:focus {
+  text-decoration: underline;
+}
+.tag a:after {
+  content: ",";
+}
+.tag:last-of-type a:after {
+  content: "";
+}
+
+.archive--title {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.archive-list {
+  list-style: none;
+  display: inline-block;
+  width :100%;
+}
+.archive-list li {
+  display: inline-block;
+  max-width: 20em;
+}
