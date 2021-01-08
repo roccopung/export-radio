@@ -24,6 +24,7 @@ columns:
             type: textarea
             required: true
           tags:
+            label: Tags
             type: tags
   - width: 1/2
     sections:
