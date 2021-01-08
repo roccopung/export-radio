@@ -70,6 +70,17 @@ body {
   font-size: 1.2em;
 }
 
+.sticky {
+	background-color: white;
+	margin-top: 10px;
+	right: 20px;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: auto;
+	z-index: 800;
+}
+
 #container-mobile {
   padding: 20px;
   position: absolute;
