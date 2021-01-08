@@ -22,7 +22,6 @@
 
 						<div class="chat">
 							<?php snippet('twitch') ?>
-							<?php snippet('chat') ?>
 						</div>
 
 						<?php snippet('social') ?>
@@ -45,7 +44,6 @@
 
 					<div class="chat">
 						<?php snippet('twitch') ?>
-						<?php snippet('chat') ?>
 					</div>
 
 					<?php snippet('social') ?>
