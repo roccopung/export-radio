@@ -19,11 +19,12 @@ columns:
           link:
             type: url
             width: 1/2
-          text:
+          description:
             label: Project description
             type: textarea
             required: true
           tags:
+            label: Tags
             type: tags
   - width: 1/2
     sections:

@@ -22,7 +22,6 @@
 
 						<div class="chat">
 							<?php snippet('twitch') ?>
-							<?php snippet('chat') ?>
 						</div>
 
 						<?php snippet('social') ?>
@@ -36,6 +35,7 @@
 			<!-- SECOND COLUMN DESKTOP -->
 			<div id="col2" class="col">
 				<?php snippet('archive') ?>
+				<div class="button sticky" name="tags"> <a href="<?= $pages->find('tags')->url() ?>">Tags</a> </div>
 			</div>
 
 			<div class="resizer second"></div>
@@ -45,7 +45,6 @@
 
 					<div class="chat">
 						<?php snippet('twitch') ?>
-						<?php snippet('chat') ?>
 					</div>
 
 					<?php snippet('social') ?>

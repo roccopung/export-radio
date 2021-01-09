@@ -1,56 +1,57 @@
 @font-face {
-	font-family: 'garamond';
-	src: url('../fonts/applegaramond-light.ttf') format('ttf');
-	font-style: normal;
-	text-rendering: optimizeLegibility;
+  font-family: "garamond";
+  src: url("../fonts/applegaramond-light.ttf") format("ttf");
+  font-style: normal;
+  text-rendering: optimizeLegibility;
 }
 
 @font-face {
-    font-family: 'Neue';
-    src: url('../fonts/Neue.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Neue.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/Neue.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/Neue.ttf') format('truetype'); /* Safari, Android, iOS */
-             font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+  font-family: "Neue";
+  src: url("../fonts/Neue.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Neue.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Neue.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Neue.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
-* {margin:0; padding: 0;}
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body::-webkit-scrollbar {
   display: none;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
 body {
   overscroll-behavior: none;
-  font-family: 'Neue';
+  font-family: "Neue";
   margin: 0;
   padding: 0;
 }
 
 #header-mobile {
   width: 100%;
-    position: fixed;
-    background-color: rgb(240, 240, 240);
-    color: #000;
-    font-size: 0.8em;
-    padding: 20px;
-    border-bottom: 4px solid #000;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
+  position: fixed;
+  background-color: rgb(240, 240, 240);
+  color: #000;
+  font-size: 0.8em;
+  padding: 20px;
+  border-bottom: 4px solid #000;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
-
 
 .button {
   background-color: none;
@@ -68,6 +69,17 @@ body {
 
 .button a {
   font-size: 1.2em;
+}
+
+.sticky {
+  background-color: white;
+  margin-top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: auto;
+  z-index: 800;
 }
 
 #container-mobile {
@@ -95,175 +107,94 @@ body {
 
 /* PREVIOUS PODCASTS PAGE */
 
-#container-mobile-podcast {
+#container-mobile-podcasts {
+  padding-top: 80px;
   width: 100%;
-  height: 100vh;
-  display: block;
+  height: auto;
+  display: flex;
   overflow-y: hidden;
+  align-items: center;
 }
 
-/*PODCAST*/
-/* Using flex with the column direction to
-   align items in a vertical direction */
-.player {
+.playlist {
   display: block;
-  height: 100%;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  padding: 0.5rem;
   padding-bottom: 2.5vw;
 }
 
-.details {
+
+.playlist--player {
   display: flex;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
-  margin-top: 10vh;
-}
-
-.track-art {
-  margin-bottom: 10vw;
-  height: 40vw;
-  width: 40vw;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Changing the font sizes to suitable ones */
-.now-playing {
-  font-size: 0.75rem;
-}
-
-.track-name {
-  font-size: 1.5rem;
-}
-
-.track-artist {
-  font-size: 0.75rem;
-}
-
-/* Using flex with the row direction to
-   align items in a horizontal direction */
-.buttons {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-right: auto;
+  width: 300px;
+  height: 120px;
   margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.playlist--player iframe {
+  width: 100%;
+  height: 120px;
 }
 
-.playpause-track,
-.prev-track,
-.next-track {
-  margin-top: 1em;
-  padding: 0.75vw;
-  opacity: 1;
-  font-size: 0.65em;
-
-  /* Smoothly transition the opacity */
-  transition: opacity .2s;
+.last-track .playlist--next {
+  display: none;
 }
 
-/* Change the opacity when mouse is hovered */
-.playpause-track:hover,
-.prev-track:hover,
-.next-track:hover {
-  opacity: 1.0;
+[data-current-track="0"] .playlist--prev {
+  display: none;
 }
 
-/* Define the slider width so that it scales properly */
-.slider_container {
-  width: 60%;
+.playlist--controls {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 6vw;
-  min-width: 17vw;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.playlist--prev + .playlist--next {
+  margin-left: 1em;
 }
 
-/* Modify the appearance of the slider */
-.seek_slider, .volume_slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5px;
-  background: black;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+.playlist--artwork img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: -2px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Modify the appearance of the slider thumb */
-.seek_slider::-webkit-slider-thumb,
-.volume_slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background:yellow;
-  cursor: pointer;
-  border-radius: 50%;
+.playlist--counter {
+  padding: 1rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
-/* Change the opacity when mouse is hovered */
-.seek_slider:hover,
-.volume_slider:hover {
-  opacity: 1.0;
+.playlist--all {
+	text-align: center;
 }
-
-.seek_slider {
-  width: 80vw;
-}
-
-.volume_slider {
-  width: 30%;
-  margin-top: 2vw;
-}
-
-.current-time,
-.total-duration {
-  padding: 1vw;
-  font-size: 0.5em;
-}
-
-i.fa-volume-down,
-i.fa-volume-up {
-  margin-top: 2vw;
-  padding: 1vw;
-}
-
-/* Change the mouse cursor to a pointer
-   when hovered over */
-i.fa-play-circle,
-i.fa-pause-circle,
-i.fa-step-forward,
-i.fa-step-backward {
-  cursor: pointer;
-}
-
 
 /* LIVE PAGE */
 
-.twitch-mobile-wrap {
-	position: relative;
-	top: 70px;
-	height: 40%;
-}
-
-.tlkio-mobile-wrap {
-	position: relative;
-	height: 60%;
-	overflow-y: scroll;
-}
 
 #container-live-mobile {
+  margin-top: 70px;
   position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: black;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.twitch_player {
+  position: fixed;
+  display: block;
+  border-bottom: solid 4px black;
+}
+
+#chat_embed {
+  margin-top: 250px;
 }

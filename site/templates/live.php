@@ -1,9 +1,8 @@
 <?php snippet('header-mobile') ?>
 
-		<div id="container-mobile-podcasts">
+		<div id="container-live-mobile">
 
 				<?php snippet('twitch') ?>
-				<?php snippet('chat') ?>
 
   	</div>
 
