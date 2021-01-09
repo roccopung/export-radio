@@ -14,7 +14,7 @@ Category: Sculpture
 
 ----
 
-Link: https://www.roccopunghellini.com/publishing2020/index.html
+Link: https://www.roccopunghellini.com
 
 ----
 
@@ -22,4 +22,4 @@ Description: A nice project A nice projectA nice projectA nice projectA nice pro
 
 ----
 
-Tags: humboldt, mansur, Mino
+Tags: Lulla, Mino
