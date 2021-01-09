@@ -1,5 +1,5 @@
 <ul class="archive-list">
-  <?php foreach ($pages->children()->listed() as $project) : ?>
+  <?php foreach ($pages->children()->listed()->sortBy('date', 'desc', 'time', 'desc') as $project) : ?>
     <li>
       <a href="<?= $project->url()  ?>">
         <figure>

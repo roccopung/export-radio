@@ -1,0 +1,13 @@
+Alt: <ninnice
+
+----
+
+Caption: 4
+
+----
+
+Photographer: nino
+
+----
+
+Template: gallery-image

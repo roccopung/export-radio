@@ -26,6 +26,16 @@ columns:
           tags:
             label: Tags
             type: tags
+          date:
+            num: date
+            field: date
+            sort: flip
+            default: now
+          time:
+            num: time
+            field: time
+            sort: flip
+            default: now
   - width: 1/2
     sections:
       gallery:
