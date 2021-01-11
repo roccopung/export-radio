@@ -14,11 +14,17 @@ Category: Bungo
 
 ----
 
-Link: 
+Link: https://www.facebook.com/
 
 ----
 
-Description: IssueKiki
+Description:
+
+*IssueKiki* is a nice person with a nice attitude
+
+And a nice dog
+
+**You know?**
 
 ----
 
@@ -30,4 +36,4 @@ Date: 2021-01-09
 
 ----
 
-Time: 
+Time:

@@ -67,7 +67,7 @@
                 <div class="project-info">
                   <dt>Link to the website</dt>
                   <dd>
-                    <a href="http://www.roccopunghellini.com" target="_blank"><?= $page->link() ?></a>
+                    <a href="<?= $page->link()->url() ?>" target="_blank"><?= $page->link() ?></a>
                   </dd>
                 </div>
               <?php endif ?>
@@ -77,7 +77,7 @@
 					<div class="textartiste">
 
             <?php if ($page->description()->isNotEmpty()): ?>
-            <p><?= $page->description() ?></p>
+            <?= $page->description()->kirbyText() ?>
             <?php endif ?>
 
             <ul class="project-gallery" style="list-style-type: none">

@@ -32,6 +32,10 @@ a {
   color: inherit;
 }
 
+p {
+  margin-bottom: 0.8em;
+}
+
 body {
   overscroll-behavior: none;
   font-family: "Neue";

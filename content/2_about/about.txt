@@ -1,5 +1,15 @@
-title: What is Export?
+Title: What is Export?
+
 ----
-link_title: About
+
+Text:
+
+As the digital workplace turns more apparent as of current, society has been forced to reconsider the very definitions of what creative expression can represent. 
+
+Export Radio represents an opportunity to re-invigorate the public through worldwilde collaboration and discussion, whilst also building bridges in a post-Brexit, mid Covid-19 environment. 
+
+The platform we want to generate aims to be shared as legacy project for Experimental Communicaations at the RCA, whilst recognising the importance of working outside the institution on...
+
 ----
-text: As the digital workplace turns more apparent as of current, society has been forced to reconsider the very definitions of what creative expression can represent. Export Radio represents an opportunity to re-invigorate the public through worldwilde collaboration and discussion, whilst also building bridges in a post-Brexit, mid Covid-19 environment. The platform we want to generate aims to be shared as legacy project for Experimental Communicaations at the RCA, whilst recognising the importance of working outside the institution on...
+
+Link-title: About

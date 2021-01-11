@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="<?= url('assets/icons/exp-logo.svg') ?>">
+  <meta name="description" content="An experimental radio station provided by Royal College of Art of London students, showcasing voices, soundscapes and noises.">
 
   <title><?= $site->title() ?></title>
   <?= css('assets/css/style.css') ?>
